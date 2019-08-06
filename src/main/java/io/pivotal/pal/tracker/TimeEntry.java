@@ -29,7 +29,7 @@ public class TimeEntry {
 
     public TimeEntry() {}
 
-    public TimeEntry(long i, TimeEntry timeEntry) {
+    TimeEntry(long i, TimeEntry timeEntry) {
         this.id = i;
         this.projectId = timeEntry.projectId;
         this.userId = timeEntry.userId;
