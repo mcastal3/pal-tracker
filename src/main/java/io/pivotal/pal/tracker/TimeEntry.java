@@ -31,13 +31,7 @@ public class TimeEntry {
         this.hours = hours;
     }
 
-    public TimeEntry() {
-//        this.id = -1L;
-//        this.projectId = -1L;
-//        this.userId = -1L;
-//        this.date = LocalDate.parse("2019-12-31");
-//        this.hours = 0;
-    }
+    public TimeEntry() {}
 
     public TimeEntry(long i, TimeEntry timeEntry) {
         this.id = i;
