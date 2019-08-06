@@ -62,11 +62,11 @@ public class TimeEntry {
         if (this == o) return true;
         if (!(o instanceof TimeEntry)) return false;
         TimeEntry timeEntry = (TimeEntry) o;
-        return id == timeEntry.id &&
-                projectId == timeEntry.projectId &&
-                userId == timeEntry.userId &&
-                hours == timeEntry.hours &&
-                date.equals(timeEntry.date);
+        if(id!=timeEntry.id) return false;
+        if(projectId != timeEntry.projectId) return false;
+        if(userId != timeEntry.userId) return false;
+        if(hours != timeEntry.hours) return false;
+        return date.equals(timeEntry.date);
     }
 
     @Override
