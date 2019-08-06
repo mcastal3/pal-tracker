@@ -6,21 +6,12 @@ import java.util.List;
 import java.util.Map;
 
 public class InMemoryTimeEntryRepository implements TimeEntryRepository {
-    private HashMap<Long,TimeEntry> repo;
-    private long idCounter;
+    private HashMap<Long,TimeEntry> repo = new HashMap<>();
+    private long idCounter = 1L;
 
-    public InMemoryTimeEntryRepository(){
-        this.repo = new HashMap<>();
-        this.idCounter = 1L;
-    }
     @Override
     public TimeEntry find(long timeEntryId) {
-        for (Map.Entry<Long, TimeEntry> entry : repo.entrySet()){
-            if (timeEntryId == entry.getKey()) {
-                return entry.getValue();
-            }
-        }
-        return null;
+        return repo.get(timeEntryId);
     }
 
     @Override
