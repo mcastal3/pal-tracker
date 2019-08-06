@@ -37,11 +37,11 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
 
     @Override
     public TimeEntry update(long id, TimeEntry timeEntry) {
-        if(find(id)!=null) {
+        if(repo.containsKey(id)) {
             return create(new TimeEntry(id, timeEntry));
         }
         return null;
-    }
+    }                                                                     
 
     @Override
     public void delete(long id) {

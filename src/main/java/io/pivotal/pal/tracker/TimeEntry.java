@@ -1,11 +1,7 @@
 package io.pivotal.pal.tracker;
 
-import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.RequestBody;
-
 import java.time.LocalDate;
 import java.util.Objects;
-
 
 public class TimeEntry {
     private long id;
